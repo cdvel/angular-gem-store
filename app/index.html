@@ -20,7 +20,6 @@
 
 <md-toolbar layout="row">
   <div class="md-toolbar-tools">
-
     <md-button class="md-icon-button" aria-label="Settings">
       <md-icon class="fa fa-diamond fa-2x"></md-icon>
     </md-button>
@@ -29,8 +28,7 @@
 </md-toolbar>
 
 <div flex layout="row">
-
-  <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
+  <md-sidenav flex="20"md-is-locked-open="true" class="md-whiteframe-z2">
   <md-list>
     <md-list-item> 
       <md-button class="md-primary" href="#/catalogue"> 
@@ -47,11 +45,9 @@
 
   </md-list>
   <div>Angular Gem Store app v<span app-version></span></div>
-
   </md-sidenav>
-
-  <md-content flex id="content">
-    <div ng-view></div>
+  <md-content flex="80" id="content">
+    <div flex ng-view></div>
   </md-content>
 </div>
 

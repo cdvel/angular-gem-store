@@ -1,10 +1,11 @@
 <div class="md-list" ng-controller="StoreController as store" ng-cloak>
-	<md-content>
+	<div layout="row" layout-xs="column">
+	<div flex>
 	<md-card ng-repeat="product in store.products" ng-hide="product.soldOut">
 		<md-card-title >
-		<h3>{{product.name}}
+		<div style="font-size: 38px">{{product.name}}
 			<em class="pull-right">{{product.price | currency}}</em>
-		</h3>
+		</div>
 		</md-card-title>
 		<md-card-content>
 			<div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
@@ -49,5 +50,6 @@
 			</section>
 		</md-card-content>
 	</md-card>
-	</md-content>
+	</div>
+	</div>
 </div>
