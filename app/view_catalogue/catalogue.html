@@ -1,55 +1,51 @@
-<div class="md-list" ng-controller="StoreController as store" ng-cloak>
-	<div layout="row" layout-xs="column">
-	<div flex>
-	<md-card ng-repeat="product in store.products" ng-hide="product.soldOut">
-		<md-card-title >
-		<div style="font-size: 38px">{{product.name}}
-			<em class="pull-right">{{product.price | currency}}</em>
-		</div>
-		</md-card-title>
-		<md-card-content>
-			<div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
-				<img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[gallery.current]}}" />
-				<ul class="clearfix">
-					<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
-						<img ng-src="{{image}}" />			
-					</li>
-				</ul>
-				<p>{{product.description}}</p>
-				<button class="md-button md-accent" ng-show="product.canPurchase">
-				      <md-icon class="fa fa-shopping-cart" style="font-size: 18px"></md-icon>
-				      Add to Cart
-				</button>
+<div layout="row" layout-xs="column" class="md-list" ng-controller="StoreController as store" ng-cloak>
+		<md-card flex="50" ng-repeat="product in store.products" ng-hide="product.soldOut">
+			<md-card-title>
+			<div style="font-size: 38px">{{product.name}}
+				<em class="pull-right">{{product.price | currency}}</em>
 			</div>
-			<section class="tab" ng-controller="TabController as tab">
-				<div flex layout="row">
-					<div ng-class="{ active:tab.isSet(1) }">
-						<md-button class="md-primary" ng-click='tab.setTab(1)'>Description</md-button>
+			</md-card-title>
+			<md-card-content>
+				<div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
+					<img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[gallery.current]}}" />
+					<ul class="clearfix">
+						<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+							<img ng-src="{{image}}" />			
+						</li>
+					</ul>
+					<p>{{product.description}}</p>
+					<button class="md-button md-accent" ng-show="product.canPurchase">
+					      <md-icon class="fa fa-shopping-cart" style="font-size: 18px"></md-icon>
+					      Add to Cart
+					</button>
+				</div>
+				<section class="tab" ng-controller="TabController as tab">
+					<div flex layout="row">
+						<div ng-class="{ active:tab.isSet(1) }">
+							<md-button class="md-primary" ng-click='tab.setTab(1)'>Description</md-button>
+						</div>
+						<div ng-class="{ active:tab.isSet(2) }">
+							<md-button class="md-primary" ng-click='tab.setTab(2)'>Specs</md-button>
+						</div>
+						<div ng-class="{ active:tab.isSet(3) }">
+							<md-button  class="md-primary"ng-click='tab.setTab(3)'>Reviews</md-button>
+						</div>
 					</div>
-					<div ng-class="{ active:tab.isSet(2) }">
-						<md-button class="md-primary" ng-click='tab.setTab(2)'>Specs</md-button>
+					<div ng-show='tab.isSet(1)'>
+							<span class="md-headline"> Description  </span>
+						<md-content flex layout-padding>
+							<p>{{product.description}}</p>
+						</md-content>
 					</div>
-					<div ng-class="{ active:tab.isSet(3) }">
-						<md-button  class="md-primary"ng-click='tab.setTab(3)'>Reviews</md-button>
+					<div ng-show='tab.isSet(2)'>
+						<span class="md-headline">Specs </span>
+						<md-content flex layout-padding>Shine: {{product.shine}}</md-content>
 					</div>
-				</div>
-				<div ng-show='tab.isSet(1)'>
-						<span class="md-headline"> Description  </span>
-					<md-content flex layout-padding>
-						<p>{{product.description}}</p>
-					</md-content>
-				</div>
-				<div ng-show='tab.isSet(2)'>
-					<span class="md-headline">Specs </span>
-					<md-content flex layout-padding>Shine: {{product.shine}}</md-content>
-				</div>
-				<div ng-show='tab.isSet(3)'>
-					<span class="md-headline"> Reviews </span>
-					<md-content flex layout-padding></md-content>
-				</div>
-			</section>
-		</md-card-content>
-	</md-card>
-	</div>
-	</div>
+					<div ng-show='tab.isSet(3)'>
+						<span class="md-headline"> Reviews </span>
+						<md-content flex layout-padding></md-content>
+					</div>
+				</section>
+			</md-card-content>
+		</md-card>
 </div>
