@@ -15,8 +15,8 @@
 		      color: '#CCC',
 		      faces: 14,
 		      images: [
-			   			"https://placeimg.com/350/200/animals",
-			   			"https://placeimg.com/150/150/animals",
+			   			"https://placeimg.com/81/81/animals",
+			   			"https://placeimg.com/89/89/animals",
 			   			"https://placeimg.com/85/85/animals"
 		      ],
 		      reviews: [{
@@ -42,8 +42,8 @@
 		      color: '#EEE',
 		      faces: 12,
 		      images: [
-			   			"https://placeimg.com/300/150/animals",
-			   			"https://placeimg.com/150/150/animals",
+			   			"https://placeimg.com/86/86/animals",
+			   			"https://placeimg.com/84/84/animals",
 			   			"https://placeimg.com/85/85/animals"
 		      ],
 		      reviews: [{
@@ -69,8 +69,8 @@
 		      color: '#000',
 		      faces: 6,
 		      images: [
-			   			"https://placeimg.com/440/280/animals",
-			   			"https://placeimg.com/150/150/animals",
+			   			"https://placeimg.com/90/90/animals",
+			   			"https://placeimg.com/84/84/animals",
 			   			"https://placeimg.com/85/85/animals"
 		      ],
 		      reviews: [{

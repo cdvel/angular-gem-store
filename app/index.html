@@ -9,29 +9,68 @@
   <title>My AngularJS Gem Store App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">  
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#/catalogue">catalogue</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<body ng-app="StoreApp" layout="column">
+
+<md-toolbar layout="row">
+  <div class="md-toolbar-tools">
+
+    <md-button class="md-icon-button" aria-label="Settings">
+      <md-icon class="fa fa-diamond fa-2x"></md-icon>
+    </md-button>
+    <h1>Angular Gem Store Web App</h1>
+  </div>
+</md-toolbar>
+
+<div flex layout="row">
+
+  <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
+  <md-list>
+    <md-list-item> 
+      <md-button class="md-primary" href="#/catalogue"> 
+        <md-icon class="fa fa-cube fa-2x" ></md-icon> 
+        Catalogue
+      </md-button> 
+    </md-list-item>
+    <md-list-item> 
+      <md-button class="md-primary" href="#/view2"> 
+        <md-icon class="fa fa-github-square fa-2x"   ></md-icon> 
+        Repo
+      </md-button> 
+    </md-list-item>
+
+  </md-list>
+  <div>Angular Gem Store app v<span app-version></span></div>
+
+  </md-sidenav>
+
+  <md-content flex id="content">
+    <div ng-view></div>
+  </md-content>
+</div>
+
+
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view></div>
 
-  <div>Angular Gem Store app: v<span app-version></span></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="bower_components/angular/angular.js"></script>
+
+  <script src="bower_components/angular/angular.js"></script> 
+  <script src="bower_components/angular-aria/angular-aria.js"></script> 
+  <script src="bower_components/angular-animate/angular-animate.js"></script> 
+  <script src="bower_components/angular-material/angular-material.js"></script> 
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="view_catalogue/catalogue.js"></script>

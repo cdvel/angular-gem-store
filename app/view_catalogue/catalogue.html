@@ -1,42 +1,53 @@
-<h1>Catalogue</h1>
-<div ng-controller="StoreController as store">
-	<div class="product-row" ng-repeat="product in store.products" ng-hide="product.soldOut">
+<div class="md-list" ng-controller="StoreController as store" ng-cloak>
+	<md-content>
+	<md-card ng-repeat="product in store.products" ng-hide="product.soldOut">
+		<md-card-title >
 		<h3>{{product.name}}
 			<em class="pull-right">{{product.price | currency}}</em>
 		</h3>
-		<div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
-			<img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[gallery.current]}}" />
-			<ul class="clearfix">
-				<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
-					<img ng-src="{{image}}" />			
-				</li>
-			</ul>
-			<p>{{product.description}}</p>
-			<button ng-show="product.canPurchase">Add to Cart</button>
-		</div>
-		<section class="tab" ng-controller="TabController as tab">
-			<ul class="nav nav-pills">
-				<li ng-class="{ active:tab.isSet(1) }">
-					<a href ng-click='tab.setTab(1)'>Description</a></li>
-					<li ng-class="{ active:tab.isSet(2) }">
-						<a href ng-click='tab.setTab(2)'>Specs</a></li>
-						<li ng-class="{ active:tab.isSet(3) }">
-							<a href ng-click='tab.setTab(3)'>Reviews</a></li>
-			</ul>
-			<div ng-show='tab.isSet(1)'>
-				<h4>Description</h4>
-				<blockquote>{{product.description}}</blockquote>
+		</md-card-title>
+		<md-card-content>
+			<div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
+				<img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[gallery.current]}}" />
+				<ul class="clearfix">
+					<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+						<img ng-src="{{image}}" />			
+					</li>
+				</ul>
+				<p>{{product.description}}</p>
+				<button class="md-button md-accent" ng-show="product.canPurchase">
+				      <md-icon class="fa fa-shopping-cart" style="font-size: 18px"></md-icon>
+				      Add to Cart
+				</button>
 			</div>
-			<div ng-show='tab.isSet(2)'>
-				<h4>Specs</h4>
-				<blockquote>Shine: {{product.shine}}</blockquote>
-			</div>
-			<div ng-show='tab.isSet(3)'>
-				<h4>Reviews</h4>
-				<blockquote></blockquote>
-			</div>
-		</section>
-
-		<hr/>
-	</div>
+			<section class="tab" ng-controller="TabController as tab">
+				<div flex layout="row">
+					<div ng-class="{ active:tab.isSet(1) }">
+						<md-button class="md-primary" ng-click='tab.setTab(1)'>Description</md-button>
+					</div>
+					<div ng-class="{ active:tab.isSet(2) }">
+						<md-button class="md-primary" ng-click='tab.setTab(2)'>Specs</md-button>
+					</div>
+					<div ng-class="{ active:tab.isSet(3) }">
+						<md-button  class="md-primary"ng-click='tab.setTab(3)'>Reviews</md-button>
+					</div>
+				</div>
+				<div ng-show='tab.isSet(1)'>
+						<span class="md-headline"> Description  </span>
+					<md-content flex layout-padding>
+						<p>{{product.description}}</p>
+					</md-content>
+				</div>
+				<div ng-show='tab.isSet(2)'>
+					<span class="md-headline">Specs </span>
+					<md-content flex layout-padding>Shine: {{product.shine}}</md-content>
+				</div>
+				<div ng-show='tab.isSet(3)'>
+					<span class="md-headline"> Reviews </span>
+					<md-content flex layout-padding></md-content>
+				</div>
+			</section>
+		</md-card-content>
+	</md-card>
+	</md-content>
 </div>
