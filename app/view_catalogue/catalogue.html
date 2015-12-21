@@ -1,7 +1,6 @@
 <h1>Catalogue</h1>
 <div ng-controller="StoreController as store">
-	<div ng-repeat="product in store.products">
-		<div class="product-row" ng-hide="product.soldOut">
+		<div class="product-row" ng-repeat="product in store.products" ng-hide="product.soldOut">
 			<h3>{{product.name}}
 				<em class="pull-right">{{product.price}}</em>
 			</h3>
@@ -9,5 +8,4 @@
 			<button ng-show="product.canPurchase">Add to Cart</button>
 		<hr/>
 		</div>
-	</div>
 </div>
