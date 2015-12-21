@@ -107,8 +107,16 @@
 
 		this.isSet = function(tab){
 			return this.tab == tab;
-		}
+		};
 
+	});
+
+	app.controller('GalleryController', function(){
+		this.current = 0;
+
+		this.setCurrent = function(current){
+			this.current = current || 0;
+		};
 	});
 
 	app.config(['$routeProvider', function($routeProvider){
