@@ -2,10 +2,19 @@
 <div ng-controller="StoreController as store">
 		<div class="product-row" ng-repeat="product in store.products" ng-hide="product.soldOut">
 			<h3>{{product.name}}
-				<em class="pull-right">{{product.price}}</em>
+				<em class="pull-right">{{product.price | currency}}</em>
 			</h3>
-			<p>{{product.description}}</p>
-			<button ng-show="product.canPurchase">Add to Cart</button>
+			<div class="gallery" ng-show="product.images.length">
+				<img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[0]}}" />
+				<ul class="clearfix">
+					<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+						<img ng-src="{{image}}" />			
+					</li>
+				</ul>
+				<p>{{product.description}}</p>
+				<button ng-show="product.canPurchase">Add to Cart</button>
+			</div>
+
 		<hr/>
 		</div>
 </div>
