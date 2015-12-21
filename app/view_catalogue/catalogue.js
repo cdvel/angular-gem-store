@@ -15,9 +15,9 @@
 		      color: '#CCC',
 		      faces: 14,
 		      images: [
-			   			"http://placehold.it/350x150",
-			   			"http://placehold.it/140x100",
-			   			"http://placehold.it/200x100"
+			   			"https://placeimg.com/350/200/animals",
+			   			"https://placeimg.com/150/150/animals",
+			   			"https://placeimg.com/85/85/animals"
 		      ],
 		      reviews: [{
 		        stars: 5,
@@ -42,9 +42,9 @@
 		      color: '#EEE',
 		      faces: 12,
 		      images: [
-			   			"http://placehold.it/350x150",
-			   			"http://placehold.it/140x100",
-			   			"http://placehold.it/200x100"
+			   			"https://placeimg.com/300/150/animals",
+			   			"https://placeimg.com/150/150/animals",
+			   			"https://placeimg.com/85/85/animals"
 		      ],
 		      reviews: [{
 		        stars: 3,
@@ -69,9 +69,9 @@
 		      color: '#000',
 		      faces: 6,
 		      images: [
-			   			"http://placehold.it/350x150",
-			   			"http://placehold.it/140x100",
-			   			"http://placehold.it/200x100"
+			   			"https://placeimg.com/440/280/animals",
+			   			"https://placeimg.com/150/150/animals",
+			   			"https://placeimg.com/85/85/animals"
 		      ],
 		      reviews: [{
 		        stars: 1,
