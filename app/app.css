@@ -28,3 +28,11 @@
   content: "";
   padding: 0;
 }
+
+.img {
+ border: solid #eee 1px;
+}
+
+md-content {
+  background-color: rgb(210,210,210);
+}
