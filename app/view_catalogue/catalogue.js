@@ -89,6 +89,92 @@
 		        author: "nat@example.org",
 		        createdOn: 1397490980837
 		      }]
+		    },
+		    {
+		      name: 'Emerald',
+		      description: "Some gems have hidden qualities beyond their luster, beyond their shine... Emerald is one of those gems.",
+		      shine: 8,
+		   	  canPurchase: true,
+			  soldOut: false,
+		      price: 110.50,
+		      rarity: 7,
+		      color: '#CCC',
+		      faces: 14,
+		      images: [
+			   			"https://placeimg.com/81/81/animals",
+			   			"https://placeimg.com/89/89/animals",
+			   			"https://placeimg.com/85/85/animals"
+		      ],
+		      reviews: [{
+		        stars: 5,
+		        body: "I love this gem!",
+		        author: "joe@example.org",
+		        createdOn: 1397490980837
+		      }, {
+		        stars: 1,
+		        body: "This gem sucks.",
+		        author: "tim@example.org",
+		        createdOn: 1397490980837
+		      }]
+		    },
+		    {
+		      name: 'Amethyst',
+		      description: "Origin of the Amethyst is unknown, hence its low value. It has a very high shine and 12 sides, however.",
+		      shine: 9,
+		      canPurchase: true,
+			  soldOut: false,		      
+		      price: 22.90,
+		      rarity: 6,
+		      color: '#EEE',
+		      faces: 12,
+		      images: [
+			   			"https://placeimg.com/86/86/animals",
+			   			"https://placeimg.com/84/84/animals",
+			   			"https://placeimg.com/85/85/animals"
+		      ],
+		      reviews: [{
+		        stars: 3,
+		        body: "I think this gem was just OK, could honestly use more shine, IMO.",
+		        author: "JimmyDean@example.org",
+		        createdOn: 1397490980837
+		      }, {
+		        stars: 4,
+		        body: "Any gem with 12 faces is for me!",
+		        author: "gemsRock@example.org",
+		        createdOn: 1397490980837
+		      }]
+		    },
+		    {
+		      name: 'Ruby',
+		      description: "Ruby is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+		      shine: 70,
+		      canPurchase: true,
+			  soldOut: false,
+		      price: 1100,
+		      rarity: 2,
+		      color: '#000',
+		      faces: 6,
+		      images: [
+			   			"https://placeimg.com/90/90/animals",
+			   			"https://placeimg.com/84/84/animals",
+			   			"https://placeimg.com/85/85/animals"
+		      ],
+		      reviews: [{
+		        stars: 1,
+		        body: "This gem is WAY too expensive for its rarity value.",
+		        author: "turtleguyy@example.org",
+		        createdOn: 1397490980837
+		      }, {
+		        stars: 1,
+		        body: "BBW: High Shine != High Quality.",
+		        author: "LouisW407@example.org",
+		        createdOn: 1397490980837
+		      }, {
+		        stars: 1,
+		        body: "Don't waste your rubles!",
+		        author: "nat@example.org",
+		        createdOn: 1397490980837
+		      }]
 		    }
 		  ];
 
