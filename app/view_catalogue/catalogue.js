@@ -2,6 +2,7 @@
 
 (function(){
 
+	// var gemss = require('http://whtfismyip.com/json!json');
 
 	var gems = [
 		    {
@@ -12,7 +13,7 @@
 			  soldOut: false,
 		      price: 110.50,
 		      rarity: 7,
-		      color: '#CCC',
+		      color: '#DDF',
 		      faces: 14,
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
@@ -40,7 +41,7 @@
 			  soldOut: false,		      
 		      price: 22.90,
 		      rarity: 6,
-		      color: '#EEE',
+		      color: '#E67',
 		      faces: 12,
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
@@ -68,7 +69,7 @@
 			  soldOut: false,
 		      price: 1100,
 		      rarity: 2,
-		      color: '#000',
+		      color: '#FDE',
 		      faces: 6,
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
@@ -101,7 +102,7 @@
 			  soldOut: false,
 		      price: 110.50,
 		      rarity: 7,
-		      color: '#CCC',
+		      color: '#7F8',
 		      faces: 14,
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
@@ -129,7 +130,7 @@
 			  soldOut: false,		      
 		      price: 22.90,
 		      rarity: 6,
-		      color: '#EEE',
+		      color: '#E14',
 		      faces: 12,
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
@@ -157,7 +158,7 @@
 			  soldOut: false,
 		      price: 1100,
 		      rarity: 2,
-		      color: '#000',
+		      color: '#F23',
 		      faces: 6,
 		      images: [
 			   			"https://placeimg.com/150/150/animals",

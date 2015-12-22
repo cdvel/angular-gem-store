@@ -21,7 +21,7 @@
 <md-toolbar layout="row">
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Settings">
-      <md-icon class="fa fa-diamond fa-2x"></md-icon>
+      <ng-md-icon icon="menu  "></ng-md-icon>
     </md-button>
     <h1>Angular Gem Store</h1>
   </div>
@@ -32,14 +32,14 @@
   <md-list>
     <md-list-item> 
       <md-button class="md-primary" href="#/catalogue"> 
-        <md-icon class="fa fa-cube fa-2x" ></md-icon> 
+        <ng-md-icon class="md-primary" icon="dashboard"></ng-md-icon>
         Catalogue
       </md-button> 
     </md-list-item>
     <md-list-item> 
       <md-button class="md-primary" href="#/view2"> 
-        <md-icon class="fa fa-github-square fa-2x"   ></md-icon> 
-        Repo
+        <ng-md-icon class="md-primary" icon="face"></ng-md-icon>
+        About
       </md-button> 
     </md-list-item>
 
@@ -76,5 +76,7 @@
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script> 
+
 </body>
 </html>

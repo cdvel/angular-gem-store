@@ -3,12 +3,9 @@
 <div flex="50" flex-sm="100" flex-xs="100" layout="column" ng-repeat="product in line" ng-hide="product.soldOut" >
 		<md-card>
 			<md-card-header>
-			<md-card-avatar>
-      			<md-icon class="fa fa-diamond fa-2x md-primary" style="background-color: rgba(0,0,0,0)"></md-icon>
-			</md-card-avatar>
 			<md-card-header-text>
 			<div style="font-size: 38px">{{product.name}}
-				<em class="pull-right">{{product.price | currency}}</em>
+				<em class="pull-right md-accent">{{product.price | currency}}</em>
 			</div>
 			</md-card-header-text>
 			
@@ -21,12 +18,11 @@
 							<img width="80px" ng-src="{{image}}" />			
 						</div>
 					</div>
-					<p>{{product.description}}</p>
-					<button class="md-button md-accent" ng-show="product.canPurchase">
-					      <md-icon class="fa fa-shopping-cart" style="font-size: 18px"></md-icon>
-					      Add to Cart
-					</button>
 				</div>
+				<p>{{product.description}}</p>
+				<md-button class="md-fab md-accent button-buy" ng-show="product.canPurchase">
+					<ng-md-icon icon="add_shopping_cart" style="fill:white"></ng-md-icon>
+				</md-button>
 				<section class="tab" ng-controller="TabController as tab">
 					<div flex layout="row">
 						<div ng-class="{ active:tab.isSet(1) }">

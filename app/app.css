@@ -36,3 +36,7 @@
 md-content {
   background-color: rgb(210,210,210);
 }
+
+.button-buy{
+  float: right;  
+}
