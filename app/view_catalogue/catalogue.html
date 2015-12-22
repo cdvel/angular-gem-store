@@ -1,7 +1,7 @@
 <div ng-cloak ng-controller="StoreController as store">
-<md-content class="md-padding" layout="row" layout-wrap layout-align="center start" layout-xs="column">
-	<div flex="50" flex-sm="100" flex-xs="100" layout="column" >
-		<md-card ng-repeat="product in store.products" ng-hide="product.soldOut">
+<md-content class="md-padding" layout="row" layout-wrap layout-align="center start" layout-xs="column" ng-repeat="line in store.products | groupBy: 2">
+<div flex="50" flex-sm="100" flex-xs="100" layout="column" ng-repeat="product in line" ng-hide="product.soldOut" >
+		<md-card>
 			<md-card-header>
 			<md-card-avatar>
       			<md-icon class="fa fa-diamond fa-2x md-primary" style="background-color: rgba(0,0,0,0)"></md-icon>
@@ -55,7 +55,8 @@
 					</div>
 				</section>
 			</md-card-content>
+
 		</md-card>
-	</div>
+</div>
 </md-content>
 </div>
