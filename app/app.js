@@ -4,7 +4,7 @@
 angular
 	.module('myApp', [
   		'ngRoute', 'ngMaterial', 'angular.filter', 'ngMdIcons',
-  		'myApp.catalogue',
+  		'myApp.catalogue',  		
 		'myApp.view1',
   		'myApp.view2',
   		'myApp.version'])

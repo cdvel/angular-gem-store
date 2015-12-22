@@ -38,5 +38,6 @@ md-content {
 }
 
 .button-buy{
-  float: right;  
+  float: right;
+  top: -40px;  
 }

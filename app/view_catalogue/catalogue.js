@@ -199,7 +199,7 @@
 		};
 
 		this.isSet = function(tab){
-			return this.tab == tab;
+			return this.tab === tab;
 		};
 
 	});

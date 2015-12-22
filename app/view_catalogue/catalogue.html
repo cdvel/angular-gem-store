@@ -8,9 +8,11 @@
 				<em class="pull-right md-accent">{{product.price | currency}}</em>
 			</div>
 			</md-card-header-text>
-			
 			</md-card-header>
 			<md-card-content>
+			<md-button aria-label="cart" class="md-fab md-accent button-buy" ng-show="product.canPurchase">
+				<ng-md-icon icon="add_shopping_cart" style="fill:white"></ng-md-icon>
+			</md-button>
 				<div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
 					<img class="img img-circle img-thumbnail center-block" width="200px" ng-src="{{product.images[gallery.current]}}" />
 					<div class="clearfix">
@@ -20,33 +22,27 @@
 					</div>
 				</div>
 				<p>{{product.description}}</p>
-				<md-button class="md-fab md-accent button-buy" ng-show="product.canPurchase">
-					<ng-md-icon icon="add_shopping_cart" style="fill:white"></ng-md-icon>
-				</md-button>
 				<section class="tab" ng-controller="TabController as tab">
 					<div flex layout="row">
-						<div ng-class="{ active:tab.isSet(1) }">
-							<md-button class="md-primary" ng-click='tab.setTab(1)'>Description</md-button>
+						<div>
+							<md-button ng-class="{'md-primary':tab.isSet(1) }" aria-label="desc" ng-click='tab.setTab(1)'>Description</md-button>
 						</div>
-						<div ng-class="{ active:tab.isSet(2) }">
-							<md-button class="md-primary" ng-click='tab.setTab(2)'>Specs</md-button>
+						<div>
+							<md-button ng-class="{ 'md-primary':tab.isSet(2) }" aria-label="specs" ng-click='tab.setTab(2)'>Specs</md-button>
 						</div>
-						<div ng-class="{ active:tab.isSet(3) }">
-							<md-button  class="md-primary"ng-click='tab.setTab(3)'>Reviews</md-button>
+						<div>
+							<md-button ng-class="{'md-primary':tab.isSet(3) }" aria-label="revs" ng-click='tab.setTab(3)'>Reviews</md-button>
 						</div>
 					</div>
 					<div ng-show='tab.isSet(1)'>
-							<span class="md-headline"> Description  </span>
 						<md-content flex layout-padding>
 							<p>{{product.description}}</p>
 						</md-content>
 					</div>
 					<div ng-show='tab.isSet(2)'>
-						<span class="md-headline">Specs </span>
 						<md-content flex layout-padding>Shine: {{product.shine}}</md-content>
 					</div>
 					<div ng-show='tab.isSet(3)'>
-						<span class="md-headline"> Reviews </span>
 						<md-content flex layout-padding></md-content>
 					</div>
 				</section>
