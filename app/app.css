@@ -37,6 +37,19 @@ md-content {
   background-color: rgb(210,210,210);
 }
 
+md-card {
+  border-radius: 20px;
+}
+
+.product-card{
+  font-size: 28px;
+  color: #eee;
+  background-color: #000;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px; 
+
+}
+
 .button-buy{
   float: right;
   top: -40px;  
