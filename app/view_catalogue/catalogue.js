@@ -199,7 +199,7 @@
 		};
 
 		this.isSet = function(tab){
-			return this.tab === tab;
+					return this.tab === tab;
 		};
 
 	});
@@ -211,6 +211,16 @@
 			this.current = current || 0;
 		};
 	});
+
+	app.controller('ReviewController', function(){
+		this.review = {};
+
+		this.addReview = function(product){
+			this.review.createdOn = Date.now();
+			product.reviews.push(this.review);
+			this.review = {};
+		}
+	})
 
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider.when('/catalogue', {

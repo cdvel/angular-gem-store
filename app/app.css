@@ -33,6 +33,14 @@
  border: solid #eee 1px;
 }
 
+.ng-invalid.ng-dirty{
+  border-color: orange;
+}
+
+.ng-valid.ng-dirty{
+  border-color: green;
+}
+
 md-content {
   background-color: rgb(210,210,210);
 }
@@ -40,6 +48,19 @@ md-content {
 md-card {
   border-radius: 20px;
 }
+
+.form-group{
+  padding: 5px;
+}
+
+.form-control{
+    width: 200px;
+}
+
+.submit-review{
+  color: #fff;
+}
+
 
 .product-card{
   font-size: 28px;
