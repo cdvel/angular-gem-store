@@ -33,6 +33,7 @@
   "dependencies": {
     "angular-material": "^1.0.1",
     "bower": "^1.7.1",
+    "express": "^4.13.3",
     "require": "^2.4.20"
   }
 }
