@@ -5,11 +5,10 @@ angular
 	.module('myApp', [
   		'ngRoute', 'ngMaterial', 'angular.filter', 'ngMdIcons',
   		'myApp.catalogue',  		
-		'myApp.view1',
-  		'myApp.view2',
+  		'myApp.about',
   		'myApp.version'])
 	.config(function($routeProvider, $mdThemingProvider) {
-  			$routeProvider.otherwise({redirectTo: '/view1'});
+  			$routeProvider.otherwise({redirectTo: '/catalogue'});
   			 $mdThemingProvider.theme('default')
               .primaryPalette('cyan')
               .accentPalette('red')
