@@ -191,19 +191,6 @@
 		this.products = gems;
 	});
 
-	app.controller('TabController', function(){
-		this.tab = 1;
-
-		this.setTab = function (tab){
-			this.tab = tab;
-		};
-
-		this.isSet = function(tab){
-					return this.tab === tab;
-		};
-
-	});
-
 	app.controller('GalleryController', function(){
 		this.current = 0;
 
@@ -220,7 +207,38 @@
 			product.reviews.push(this.review);
 			this.review = {};
 		}
-	})
+	});
+
+	app.directive('productReview', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'view_catalogue/product-review.html'
+		};
+	});
+
+	app.directive('productSpecs', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'view_catalogue/product-specs.html'
+		};
+	});
+
+	app.directive('productTabs', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'view_catalogue/product-tabs.html',
+			controller: function(){
+				this.tab = 1;
+				this.setTab = function (tab){
+					this.tab = tab;
+				};
+				this.isSet = function(tab){
+							return this.tab === tab;
+				};
+			},
+			controllerAs: 'tab'
+		};
+	});
 
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider.when('/catalogue', {

@@ -1,0 +1,18 @@
+<section class="tab">
+    <div flex layout="row">
+        <div>
+            <md-button ng-class="{'md-primary':tab.isSet(1) }" aria-label="desc" ng-click='tab.setTab(1)'>Description</md-button>
+        </div>
+        <div>
+            <md-button ng-class="{ 'md-primary':tab.isSet(2) }" aria-label="specs" ng-click='tab.setTab(2)'>Specs</md-button>
+        </div>
+        <div>
+            <md-button ng-class="{'md-primary':tab.isSet(3) }" aria-label="revs" ng-click='tab.setTab(3)'>Reviews</md-button>
+        </div>
+    </div>
+    <md-content ng-show='tab.isSet(1)' flex layout-padding>
+        <p>{{product.description}}</p>
+    </md-content>
+    <product-specs ng-show='tab.isSet(2)'></product-specs>
+    <product-review ng-show='tab.isSet(3)'></product-review>
+</section>
