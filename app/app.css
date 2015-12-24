@@ -86,6 +86,15 @@ a {
 
 }
 
+.gallery-img{
+  border: solid #eee 1px;
+}
+
+.tile-footer{
+  padding: 5px; 
+  font-size: 12px;
+}
+
 .button-buy{
   float: right;
   top: -40px;  

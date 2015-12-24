@@ -1,8 +1,11 @@
 <div class="gallery" ng-show="product.images.length">
-    <img class="img img-circle img-thumbnail center-block" width="200px" ng-src="{{product.images[gallery.current]}}" />
-    <div class="clearfix">
-        <div class="img small-image pull-left thumbnail" ng-repeat="image in product.images">
-            <img width="80px" ng-src="{{image}}" />
-        </div>
-    </div>
+	<md-grid-list md-cols-sm="3" md-cols-md="3" md-cols-gt-md="3"
+	        	  md-row-height-gt-md="1:1" md-row-height="1:1" >
+    <md-grid-tile ng-repeat="image in product.images"
+                  md-rowspan="{{gallery.isSet(image) ? 2 : 1}}"
+                  md-colspan="{{gallery.isSet(image) ? 2 : 1}}" >
+      <img width="100%" ng-src="{{image}}" ng-click="gallery.setCurrent(image)"/>
+     <md-grid-tile-footer ng-hide="gallery.isSet(image)" class="tile-footer">Click image to enlarge</md-grid-tile-footer>
+    </md-grid-tile>
+	</md-grid-list>
 </div>

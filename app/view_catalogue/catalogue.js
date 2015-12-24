@@ -2,8 +2,6 @@
 
 (function(){
 
-	// var gemss = require('http://whtfismyip.com/json!json');
-
 	var gems = [
 		    {
 		      name: 'Azurite',
@@ -18,8 +16,7 @@
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
 			   			"https://placeimg.com/150/150/nature",
-			   			"https://placeimg.com/150/150/people",
-			   			"https://placeimg.com/150/150/any"
+			   			"https://placeimg.com/150/150/people"
 		      ],
 		      reviews: [{
 		        stars: 5,
@@ -46,8 +43,7 @@
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
 			   			"https://placeimg.com/150/150/nature",
-			   			"https://placeimg.com/150/150/people",
-			   			"https://placeimg.com/150/150/any"
+			   			"https://placeimg.com/150/150/people"
 		      ],
 		      reviews: [{
 		        stars: 3,
@@ -74,8 +70,7 @@
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
 			   			"https://placeimg.com/150/150/nature",
-			   			"https://placeimg.com/150/150/people",
-			   			"https://placeimg.com/150/150/any"
+			   			"https://placeimg.com/150/150/people"
 		      ],
 		      reviews: [{
 		        stars: 1,
@@ -107,8 +102,7 @@
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
 			   			"https://placeimg.com/150/150/nature",
-			   			"https://placeimg.com/150/150/people",
-			   			"https://placeimg.com/150/150/any"
+			   			"https://placeimg.com/150/150/people"
 		      ],
 		      reviews: [{
 		        stars: 5,
@@ -135,8 +129,7 @@
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
 			   			"https://placeimg.com/150/150/nature",
-			   			"https://placeimg.com/150/150/people",
-			   			"https://placeimg.com/150/150/any"
+			   			"https://placeimg.com/150/150/people"
 		      ],
 		      reviews: [{
 		        stars: 3,
@@ -163,8 +156,7 @@
 		      images: [
 			   			"https://placeimg.com/150/150/animals",
 			   			"https://placeimg.com/150/150/nature",
-			   			"https://placeimg.com/150/150/people",
-			   			"https://placeimg.com/150/150/any"
+			   			"https://placeimg.com/150/150/people"
 		      ],
 		      reviews: [{
 		        stars: 1,
@@ -237,11 +229,20 @@
 		return {
 			restrict: 'E',
 			templateUrl: 'view_catalogue/product-gallery.html',
-			controller: function(){
+			controller: function($scope){
 				this.current = 0;
-				this.setCurrent = function(current){
-					this.current = current || 0;
+				this.setCurrent = function(image){
+					let selected = $scope.product.images.indexOf(image);
+					if (selected == 2) {
+						$scope.product.images.push($scope.product.images.shift());
+						selected = 1;
+					}
+					this.current = selected || 0;
 				};
+				this.isSet = function(image){
+					return $scope.product.images[this.current] == image;
+				}
+
 			},
 			controllerAs: 'gallery'
 		}
