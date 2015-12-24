@@ -191,13 +191,6 @@
 		this.products = gems;
 	});
 
-	app.controller('GalleryController', function(){
-		this.current = 0;
-
-		this.setCurrent = function(current){
-			this.current = current || 0;
-		};
-	});
 
 	app.controller('ReviewController', function(){
 		this.review = {};
@@ -239,6 +232,20 @@
 			controllerAs: 'tab'
 		};
 	});
+
+	app.directive('productGallery', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'view_catalogue/product-gallery.html',
+			controller: function(){
+				this.current = 0;
+				this.setCurrent = function(current){
+					this.current = current || 0;
+				};
+			},
+			controllerAs: 'gallery'
+		}
+	})
 
 	app.config(['$routeProvider', function($routeProvider){
 		$routeProvider.when('/catalogue', {
