@@ -1,6 +1,6 @@
 # Angular based store app
 
-Skeleton from http://github.com/angular/angular-seed](http://github.com/angular/angular-seed)
+Skeleton from http://github.com/angular/angular-seed
 
 ## Getting Started
 
